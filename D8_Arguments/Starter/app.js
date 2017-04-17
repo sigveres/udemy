@@ -3,13 +3,13 @@
 
 
 function greet(firstname="firstname", lastname="lastname", language="en" ) {
-    
-    
+
+
     if (arguments.length === 0) {
         console.log("mission paramaters!");
     }
-    
-    
+
+
     console.log(firstname);
     console.log(lastname);
     console.log(language);
@@ -35,14 +35,14 @@ console.log(getPerson());
 /*
 // Whitespace - Comment code, you can use whitespace
 
-var 
+var
     // firename of the person
     firstname, lastname, language;
 
 var person = {
     firstname: "sigve",
     lastname: "resland"
-    
+
 }
 
 console.log(person);
@@ -65,9 +65,9 @@ var greetFun = function(name) {
 };
 greetFun("snig");
 
-// Immediately Invoked funciton expression (IIFE) 
+// Immediately Invoked funciton expression (IIFE)
 var greeting = function(name) {
-    // 
+    //
     return "hello " + name;
 }("sigve"); // run function with parameter
 
@@ -77,23 +77,23 @@ console.log(greeting); // invoke the function
 
 
 // IIFE EXAMPLE
-// 
+//
 var firstname = "sigve Inside IIFE";
 
-// wrap () arroud function. create a function on the fly 
+// wrap () arroud function. create a function on the fly
 (function(name) {
     var greeting = "hello ";
     console.log(greeting + name);
-    
+
 }(firstname)); //give parameter to the IIFE
 
 */
 
 /* Closure
-// Selv om en function er ferdig - så kan man fortsatt bruker verdien som ble laget. 
+// Selv om en function er ferdig - så kan man fortsatt bruker verdien som ble laget.
 
 function greet(whattosay) {
-    
+
     return function(name) {
         console.log(whattosay + " " + name);
     }
@@ -105,14 +105,14 @@ sayHi("sigve");
 
 */
 
-// Closure part 2: arrays blir laget i loop - og svarer vil bli 3 - 3 - 3. 
-// Kan bli fikset ved bruk av let - eller en IIFE function i arr.push. se example 
+// Closure part 2: arrays blir laget i loop - og svarer vil bli 3 - 3 - 3.
+// Kan bli fikset ved bruk av let - eller en IIFE function i arr.push. se example
 /*
 function buildFunctions() {
     var arr = [];
-    
+
     for (var i = 0; i<3; i++) {
-        // let j = i; eller bytte plass med var i / let i. 
+        // let j = i; eller bytte plass med var i / let i.
         arr.push( function() {
             console.log(i);
         })
@@ -129,12 +129,12 @@ fs[2]();
 
 
 /*
-// IIFE example: 
+// IIFE example:
 function buildFunctions() {
     var arr = [];
-    
+
     for (var i = 0; i<3; i++) {
-        arr.push( 
+        arr.push(
             (function(j) {
                 return function() {
                     console.log(j);
@@ -156,13 +156,13 @@ fs[2]();
 /*
 // Function Factory
 function makeGreeting(language) {
-    
+
     return function(firstename, lastname) {
-        
+
         if (language === "en") {
             console.log("Hello " + firstename + " " + lastname);
         }
-        
+
         if (language === "es") {
             console.log("Hola " + firstename + " " + lastname);
         }
@@ -180,7 +180,7 @@ greetEnglish("Sigve", "Resaland");
 
 function sayHiLater() {
     var greeting = "Hello!";
-    
+
     setTimeout( function() {
         console.log(greeting);
     }, 3000);
@@ -188,7 +188,7 @@ function sayHiLater() {
 
 sayHiLater();
 
-*/ 
+*/
 
 ////////////////////////////////////////////
 // Functional programming
@@ -201,8 +201,8 @@ sayHiLater();
 
 function mapForEach(arr, fn) {
     var newArr = [];
-    
-    for (var i=0; i < arr1.length; i++) {   
+
+    for (var i=0; i < arr1.length; i++) {
         newArr.push(
             fn(arr[i])
         )
@@ -286,7 +286,7 @@ String.prototype.isLengtGreaterThan = function(limit) {
 console.log("john".isLengtGreaterThan(4));
 
 Number.prototype.isNumber = function() {
-    return 
+    return
 }
 */
 
@@ -312,7 +312,7 @@ var person = {
     }
 }
 
-// Other method to create objects - prototypal inheritance. 
+// Other method to create objects - prototypal inheritance.
 var john = Object.create(person);
 john.firstname = "john";
 john.lastname = "snig";
@@ -328,7 +328,7 @@ console.log(john);
 ///////////
 
 // CLASSES
-// defines and object. 
+// defines and object.
 
 
 // ODDS AND ENDS
@@ -337,7 +337,7 @@ console.log(john);
 // initialisaiton
 var people = [
     {
-        // jogn 
+        // jogn
         firstname: "jogn",
         lastname: "snig",
         adress: [
@@ -357,4 +357,9 @@ var people = [
 ]
 
 */
+var people = {
+  firstname: "sigve",
+  lastname: "resaland"
+}
 
+console.log(people.firstname + " " + people.lastname);
