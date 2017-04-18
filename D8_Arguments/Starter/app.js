@@ -357,9 +357,103 @@ var people = [
 ]
 
 */
+/*
 var people = {
   firstname: "sigve",
   lastname: "resaland"
 }
 
 console.log(people.firstname + " " + people.lastname);
+*/
+/////////////////////////
+//TYPEOF
+/////////////////////////
+/*
+var a = 3;
+console.log(typeof a);
+
+var b = "Hello";
+console.log(typeof b);
+
+var c = {};
+console.log(typeof c);
+
+var d = [];
+console.log(typeof d); // weird!
+console.log(Object.prototype.toString.call(d)); // better!
+
+// .call() - parameter sier hva som er this, her sjekker man toString med this (d)
+
+function Person(name) {
+    this.name = name;
+}
+
+var e = new Person('Jane');
+console.log(typeof e);
+console.log(e instanceof Person);
+
+console.log(typeof undefined); // makes sense
+console.log(typeof null); // a bug since, like, forever...
+
+var z = function() { };
+console.log(typeof z);
+*/
+
+/////////////////////////
+// STRICT MODE
+/////////////////////////
+// Got to declare all variables before you use them
+/*
+"use strict";
+var person;
+
+persom = {};
+console.log(persom);
+*/
+
+
+
+/////////////////////////
+// DEEP DIVE - Jquery
+/////////////////////////
+/*
+var q = $("ul.people li");
+console.log(q);
+
+*/
+
+/////////////////////////
+// MY LIBRARY
+/////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////
+// STRICT MODE
+/////////////////////////
+
+
+
+
+
+
+/////////////////////////
+// STRICT MODE
+/////////////////////////
