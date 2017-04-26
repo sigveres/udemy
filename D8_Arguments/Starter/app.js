@@ -428,9 +428,11 @@ console.log(q);
 
 
 
+var g = G$("john", "snig", "norsk");
 
+console.log(g);
 
-
+g.greet(false);
 
 
 
