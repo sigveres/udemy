@@ -428,13 +428,17 @@ console.log(q);
 
 
 
-var g = G$("john", "snig", "norsk");
+var g = G$("john", "snig");
 
-console.log(g);
+g.greet().setLang("es").greet(true).log();
 
-g.greet(false);
+$("#login").click(function() {
+  var loginGrtr = G$("john", "Doe");
 
+  $("#logindiv").hide();
 
+  loginGrtr.setLang($('#lang').val()).HTMLGreeting('#greeting', true).log();
+});
 
 
 
